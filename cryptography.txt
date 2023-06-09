@@ -1,0 +1,28 @@
+This cryptography tool is a command-line tool that allows users to generate encryption keys, encrypt messages using an encryption key, and decrypt messages using an encryption key.
+
+The tool uses the argparse library to parse command-line arguments. Users can specify one of three arguments: -g to generate a new encryption key, -e to encrypt a message, or -d to decrypt a message. Users can also provide an optional -k argument to specify an encryption key to use.
+
+If the user specifies the -g argument, the tool generates a new encryption key using the Fernet.generate_key() method from the cryptography library and prints the key to the console.
+
+If the user specifies the -e argument, the tool uses the Fernet class from the cryptography library to encrypt the message using the specified encryption key. The encrypted message is printed to the console.
+
+If the user specifies the -d argument, the tool uses the Fernet class from the cryptography library to decrypt the encrypted message using the specified encryption key. The decrypted message is printed to the console.
+
+If the user does not specify any arguments or provides an incorrect argument, the tool prints a help message to the console using the parser.print_help() method.
+
+In short,the tool allows users to perform basic encryption and decryption tasks from the command line, without needing to write their own code or use an external program
+
+
+This tool supports the following options:
+
+• -g or --generate-key: generates a new encryption key.
+
+• -e MESSAGE or --encrypt MESSAGE: encrypts a message using a given encryption key.
+
+• -d ENCRYPTED_MESSAGE or --decrypt ENCRYPTED_MESSAGE: decrypts a message using a given encryption key.
+
+• -k ENCRYPTION_KEY or --key ENCRYPTION_KEY: specifies the encryption key to use for encryption or decryption.
+
+
+HOW TO USE#####################################################################
+To use this tool, save the code to a file named drscryptography.py, and then run it from the command line using python cryptography.py followed by the desired options and arguments.
